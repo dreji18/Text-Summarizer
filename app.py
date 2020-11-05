@@ -39,13 +39,10 @@ def main():
     # Summarization
     st.subheader("Summarize Your Text")
     message = st.text_area('Input your sentence here:') 
-    summary_options = st.selectbox("Choose Summarizer",['summy','gensim'])
+    summary_options = st.selectbox("Choose Summarizer",['gensim'])
     
     if st.button("Summarize"):
-        if summary_options == 'summy':
-            st.text("Using Sumy Summarizer")
-            summary_result = sumy_summarizer(message)
-        elif summary_options == 'gensim':
+        if summary_options == 'gensim':
             st.text("Using Gensim Summarizer ..")
             summary_result = summarize(message)
         else:
