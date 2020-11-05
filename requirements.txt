@@ -3,4 +3,4 @@ textblob
 spacy
 gensim
 sumy
-nltk
+nltk.text
